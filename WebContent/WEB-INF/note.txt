@@ -1,0 +1,107 @@
+https://pypi.python.org/pypi/jieba/0.38
+
+
+https://github.com/AIChallenger/AI_Challenger/blob/master/Baselines/README.md
+
+https://challenger.ai/competition/translation/subject
+
+
+其他：
+http://blog.csdn.net/gyn18744026959/article/details/51333961
+
+
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" metadata-complete="false" version="3.1">
+  <context-param>
+    <param-name>companyName</param-name>
+    <param-value>lampbrother</param-value>
+  </context-param>
+  <context-param>
+    <param-name>driver</param-name>
+    <param-value>com.mysql.jdbc.Driver</param-value>
+  </context-param>
+  <servlet>
+    <display-name>InitServlet</display-name>
+    <servlet-name>InitServlet</servlet-name>
+    <servlet-class>com.lpf.mvc.servlet.InitServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>HelloServlet</servlet-name>
+    <servlet-class>com.lpf.www.HelloServlet</servlet-class>
+    <init-param>
+      <param-name>user</param-name>
+      <param-value>root</param-value>
+    </init-param>
+    <init-param>
+      <param-name>password</param-name>
+      <param-value>1230</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>login</servlet-name>
+    <servlet-class>com.lpf.www.LoginServlet</servlet-class>
+    <load-on-startup>-2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>login</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Second</servlet-name>
+    <servlet-class>com.lpf.www.Second</servlet-class>
+    <load-on-startup>-2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Second</servlet-name>
+    <url-pattern>/second</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>hellojsp</servlet-name>
+    <jsp-file>/hello.jsp</jsp-file>
+    <init-param>
+      <param-name>test</param-name>
+      <param-value>testvalue</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>hellojsp</servlet-name>
+    <url-pattern>/hellojsp</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>customerServlet</servlet-name>
+    <servlet-class>com.lpf.mvc.servlet.CustomerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>customerServlet</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CustomerServletXML</display-name>
+    <servlet-name>CustomerServletXML</servlet-name>
+    <servlet-class>com.lpf.mvc.servlet.CustomerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CustomerServletXML</servlet-name>
+    <url-pattern>/customerServletXML</url-pattern>
+  </servlet-mapping>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/hello.jsp</location>
+  </error-page>
+  <error-page>
+    <exception-type>java.lang.ArithmeticException</exception-type>
+    <location>/error.jsp</location>
+  </error-page>
+  <error-page>
+    <exception-type>java.lang.NullPointerException</exception-type>
+    <location>/error.jsp</location>
+  </error-page>
+</web-app>
