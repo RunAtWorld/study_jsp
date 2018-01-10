@@ -2,7 +2,6 @@
 <c3p0-config>
 	<!-- This app is massive! -->
 	<named-config name="mvcapp">
-
 		<property name="user">root</property>
 		<property name="password">lipengfei2015</property>
 		<property name="driverClass">com.mysql.jdbc.Driver</property>
